@@ -1,0 +1,12 @@
+{
+  "name": "ts_presentation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55"
+  }
+}
