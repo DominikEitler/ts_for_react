@@ -2,7 +2,7 @@
  * Example TS
  */
 
-const TSFunction = (
+const tsFunction = (
   param1: number,
   param2: number,
   options: { operation: "add" | "subtract" },

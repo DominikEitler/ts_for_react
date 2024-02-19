@@ -5,13 +5,13 @@
 const x: XorY = { hi: "1" };
 const y: XorY = { hi: 1 };
 
-type Generic<T extends XorY> = { lala: T["hi"] };
+type GenericType<T extends XorY> = { lalala: T["hi"] };
 
-const m: Generic<X> = { lala: "1" };
-const n: Generic<X> = { lala: 1 };
+const m: GenericType<X> = { lalala: "1" };
+const n: GenericType<X> = { lalala: 1 };
 
-const o: Generic<Y> = { lala: "1" };
-const p: Generic<Y> = { lala: 1 };
+const o: GenericType<Y> = { lalala: "1" };
+const p: GenericType<Y> = { lalala: 1 };
 
 /**
  * Generic functions

@@ -8,6 +8,7 @@ type Y = { hi: number };
 // Union Types
 
 type XorY = X | Y;
+type HiType1 = XorY["hi"]
 
 const or1: XorY = { hi: "1" };
 const or2: XorY = { hi: 1 };
@@ -15,19 +16,20 @@ const or2: XorY = { hi: 1 };
 // Intersection Types
 
 type XandY = X & Y;
+type HiType2 = XandY["hi"]
 
 const and1: XandY = { hi: "1" };
 const and2: XandY = { hi: 1 };
 
 
 /**
- * Discriminated Union Types
+ * Discriminating Union Types
  */
 
-type A = { type: "a"; a: string };
-type B = { type: "b"; b: string };
+type A = { type: "type-A"; a: string };
+type B = { type: "type-B"; b: string };
 
 type AorB = A | B;
 
-const a: AorB = { type: "a", a: "a", b: "b" };
-const b: AorB = { type: "b", a: "a", b: "b" };
+const a: AorB = { type: "type-A", a: "a", b: "b" };
+const b: AorB = { type: "type-B", a: "a", b: "b" };

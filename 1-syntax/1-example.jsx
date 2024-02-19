@@ -2,7 +2,7 @@
  * Example JS
  */
 
-const JSFunction = (
+const jsFunction = (
   param1,
   param2,
   options

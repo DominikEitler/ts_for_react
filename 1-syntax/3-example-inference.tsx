@@ -2,7 +2,7 @@
  * Example TS with Inference
  */
 
-const TSFunctionWithInference = (
+const tsFunctionWithInference = (
   param1: number,
   param2: number,
   options: { operation: "add" | "subtract" },
