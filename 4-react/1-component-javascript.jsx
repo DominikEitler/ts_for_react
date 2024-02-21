@@ -1,7 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Button = ({ title, onClick, variant = "light" }) => {
+export const Button = ({
+  title,
+  onClick,
+  variant = "light"
+}) => {
   return (
     <button className={variant} onClick={onClick}>
       {title}
