@@ -1,10 +1,10 @@
 import React, { FC, ReactNode, createContext, useContext } from "react";
 
 // Context
-type MyContextProps = {
+type MyContextParams = {
   providerValue: string;
 };
-const MyContext = createContext<MyContextProps>({ providerValue: "" });
+const MyContext = createContext<MyContextParams>({ providerValue: "" });
 
 // Provider
 type MyContextProviderProps = {

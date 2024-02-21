@@ -1,8 +1,4 @@
 import React, { FC } from "react";
-import {
-  ButtonWithChildren,
-  ButtonWithChildrenProps,
-} from "./3-component-with-children";
 
 type IconProps = {
   name: string;
@@ -12,21 +8,23 @@ const Icon: FC<IconProps> = ({ name, variant = "light" }) => {
   return <i className={`icon-${name} variant-${variant}`} />;
 };
 
-type IconButtonProps = Omit<ButtonWithChildrenProps, "children"> & {
+type IconButtonProps = {
   title: string;
+  onClick: () => void;
   iconName: IconProps["name"];
+  iconVariant?: IconProps["variant"];
 };
 
 export const IconButton: FC<IconButtonProps> = ({
   title,
   onClick,
-  variant,
   iconName,
+  iconVariant
 }) => {
   return (
-    <ButtonWithChildren onClick={onClick} variant={variant}>
-      <Icon name={iconName} variant={variant} />
+    <button onClick={onClick} >
+      <Icon name={iconName} variant={iconVariant} />
       {title}
-    </ButtonWithChildren>
+    </button>
   );
 };
